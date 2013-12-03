@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8736AB331849DFB1003F74A6 /* Discovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8736AB321849DFB1003F74A6 /* Discovery.m */; };
+		8736AB351849DFDF003F74A6 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8736AB341849DFDF003F74A6 /* IOBluetooth.framework */; };
+		8736AB381849EA26003F74A6 /* WeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8736AB371849EA26003F74A6 /* WeatherController.m */; };
+		8736AB3B184AAE41003F74A6 /* SensorService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8736AB3A184AAE41003F74A6 /* SensorService.m */; };
 		87AF01D41842966100F290DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87AF01D31842966100F290DE /* Cocoa.framework */; };
 		87AF01DE1842966100F290DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87AF01DC1842966100F290DE /* InfoPlist.strings */; };
 		87AF01E01842966100F290DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AF01DF1842966100F290DE /* main.m */; };
@@ -31,6 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8736AB311849DFB1003F74A6 /* Discovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Discovery.h; sourceTree = "<group>"; };
+		8736AB321849DFB1003F74A6 /* Discovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Discovery.m; sourceTree = "<group>"; };
+		8736AB341849DFDF003F74A6 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+		8736AB361849EA26003F74A6 /* WeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherController.h; sourceTree = "<group>"; };
+		8736AB371849EA26003F74A6 /* WeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherController.m; sourceTree = "<group>"; };
+		8736AB39184AAE41003F74A6 /* SensorService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorService.h; sourceTree = "<group>"; };
+		8736AB3A184AAE41003F74A6 /* SensorService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorService.m; sourceTree = "<group>"; };
 		87AF01D01842966100F290DE /* BlueWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87AF01D31842966100F290DE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		87AF01D61842966100F290DE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -57,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8736AB351849DFDF003F74A6 /* IOBluetooth.framework in Frameworks */,
 				87AF01D41842966100F290DE /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +85,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8736AB301849DF6C003F74A6 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				8736AB311849DFB1003F74A6 /* Discovery.h */,
+				8736AB321849DFB1003F74A6 /* Discovery.m */,
+				8736AB39184AAE41003F74A6 /* SensorService.h */,
+				8736AB3A184AAE41003F74A6 /* SensorService.m */,
+			);
+			name = BLE;
+			sourceTree = "<group>";
+		};
 		87AF01C71842966100F290DE = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +118,7 @@
 		87AF01D21842966100F290DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8736AB341849DFDF003F74A6 /* IOBluetooth.framework */,
 				87AF01D31842966100F290DE /* Cocoa.framework */,
 				87AF01F21842966100F290DE /* XCTest.framework */,
 				87AF01D51842966100F290DE /* Other Frameworks */,
@@ -115,11 +139,14 @@
 		87AF01D91842966100F290DE /* BlueWeather */ = {
 			isa = PBXGroup;
 			children = (
+				8736AB301849DF6C003F74A6 /* BLE */,
 				87AF01E51842966100F290DE /* AppDelegate.h */,
 				87AF01E61842966100F290DE /* AppDelegate.m */,
 				87AF01E81842966100F290DE /* MainMenu.xib */,
 				87AF01EB1842966100F290DE /* Images.xcassets */,
 				87AF01DA1842966100F290DE /* Supporting Files */,
+				8736AB361849EA26003F74A6 /* WeatherController.h */,
+				8736AB371849EA26003F74A6 /* WeatherController.m */,
 			);
 			path = BlueWeather;
 			sourceTree = "<group>";
@@ -252,7 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8736AB331849DFB1003F74A6 /* Discovery.m in Sources */,
+				8736AB3B184AAE41003F74A6 /* SensorService.m in Sources */,
 				87AF01E71842966100F290DE /* AppDelegate.m in Sources */,
+				8736AB381849EA26003F74A6 /* WeatherController.m in Sources */,
 				87AF01E01842966100F290DE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +494,7 @@
 				87AF02031842966100F290DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87AF02041842966100F290DE /* Build configuration list for PBXNativeTarget "BlueWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +503,7 @@
 				87AF02061842966100F290DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
