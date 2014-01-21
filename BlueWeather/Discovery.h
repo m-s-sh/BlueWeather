@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <IOBluetooth/IOBluetooth.h>
+#import "SensorTag.h"
 
-
-/****************************************************************************/
-/*							UI protocols									*/
-/****************************************************************************/
+// -------------------------------------------------------------------------------
+//	UI protocols
+// -------------------------------------------------------------------------------
 @protocol DiscoveryDelegate <NSObject>
 - (void) discoveryDidRefresh;
 - (void) discoveryStatePoweredOff;
@@ -22,15 +22,19 @@
 
 + (Discovery*) sharedInstance;
 
-@property (nonatomic, assign) id<DiscoveryDelegate>   discoveryDelegate;
-/****************************************************************************/
-/*								Actions										*/
-/****************************************************************************/
+@property (nonatomic, assign) id<DiscoveryDelegate> discoveryDelegate;
+@property (nonatomic, assign) id<SensorTagDelegate> peripheralDelegate;
+// -------------------------------------------------------------------------------
+//	Actions
+// -------------------------------------------------------------------------------
 - (void) startScanningForUUIDString:(NSString *)uuidString;
 - (void) stopScanning;
+- (void) connectPeripheral:(CBPeripheral*)peripheral;
+- (void) disconnectPeripheral:(CBPeripheral*)peripheral;
 
-/****************************************************************************/
-/*							Access to the devices							*/
-/****************************************************************************/
+// -------------------------------------------------------------------------------
+//	Access to the devices
+// -------------------------------------------------------------------------------
 @property (readonly, nonatomic) NSMutableArray    *foundPeripherals;
+@property (retain, nonatomic) NSMutableArray	*connectedPeripherals;
 @end

@@ -10,7 +10,8 @@
 
 @interface WeatherController : NSObject {
     IBOutlet NSOutlineView *_leftView;
-    IBOutlet NSTextField *_textField;
+    IBOutlet NSTextField *_ambientTemperatureField;
+    IBOutlet NSTextField *_IRTemperatureField;
     NSMutableArray *_periphralItems;
 }
 @end
