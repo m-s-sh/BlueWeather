@@ -23,6 +23,7 @@
 		87AF01FE1842966100F290DE /* BlueWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AF01FD1842966100F290DE /* BlueWeatherTests.m */; };
 		87E3982E1867BDF6008315EE /* SensorTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E3982D1867BDF6008315EE /* SensorTag.m */; };
 		87E398311867C1E3008315EE /* Sensors.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E398301867C1E3008315EE /* Sensors.m */; };
+		9C6027461E0EB7AC00CC9BA7 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6027451E0EB7AC00CC9BA7 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		87E3982D1867BDF6008315EE /* SensorTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorTag.m; sourceTree = "<group>"; };
 		87E3982F1867C1E3008315EE /* Sensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sensors.h; sourceTree = "<group>"; };
 		87E398301867C1E3008315EE /* Sensors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sensors.m; sourceTree = "<group>"; };
+		9C6027451E0EB7AC00CC9BA7 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6027461E0EB7AC00CC9BA7 /* CoreBluetooth.framework in Frameworks */,
 				8736AB351849DFDF003F74A6 /* IOBluetooth.framework in Frameworks */,
 				87AF01D41842966100F290DE /* Cocoa.framework in Frameworks */,
 			);
@@ -123,6 +126,7 @@
 		87AF01D21842966100F290DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C6027451E0EB7AC00CC9BA7 /* CoreBluetooth.framework */,
 				8736AB341849DFDF003F74A6 /* IOBluetooth.framework */,
 				87AF01D31842966100F290DE /* Cocoa.framework */,
 				87AF01F21842966100F290DE /* XCTest.framework */,
