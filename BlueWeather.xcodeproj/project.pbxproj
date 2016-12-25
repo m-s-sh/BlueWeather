@@ -149,13 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				8736AB301849DF6C003F74A6 /* BLE */,
-				87AF01E51842966100F290DE /* AppDelegate.h */,
-				87AF01E61842966100F290DE /* AppDelegate.m */,
-				87AF01E81842966100F290DE /* MainMenu.xib */,
-				87AF01EB1842966100F290DE /* Images.xcassets */,
-				87AF01DA1842966100F290DE /* Supporting Files */,
 				8736AB361849EA26003F74A6 /* WeatherController.h */,
 				8736AB371849EA26003F74A6 /* WeatherController.m */,
+				87AF01DA1842966100F290DE /* Supporting Files */,
 			);
 			path = BlueWeather;
 			sourceTree = "<group>";
@@ -163,6 +159,10 @@
 		87AF01DA1842966100F290DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				87AF01E51842966100F290DE /* AppDelegate.h */,
+				87AF01E61842966100F290DE /* AppDelegate.m */,
+				87AF01EB1842966100F290DE /* Images.xcassets */,
+				87AF01E81842966100F290DE /* MainMenu.xib */,
 				87AF01DB1842966100F290DE /* BlueWeather-Info.plist */,
 				87AF01DC1842966100F290DE /* InfoPlist.strings */,
 				87AF01DF1842966100F290DE /* main.m */,

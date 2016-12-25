@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Mommosoft. All rights reserved.
 //
 
+#import "WeatherController.h"
 #import "SensorTag.h"
 #import "Discovery.h"
-#import "WeatherController.h"
 
 @interface WeatherController() <DiscoveryDelegate, SensorTagDelegate>
 {
