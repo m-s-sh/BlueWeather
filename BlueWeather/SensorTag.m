@@ -115,6 +115,7 @@ NSString *kTemperatureSensorDataConfigUUIDString =  @"F000AA02-0451-4000-B000-00
 
 -(void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     if ([characteristic.UUID isEqual:_temperatureCharacteristic.UUID]) {
+        NSLog(@"[didUpdateValueForCharacteristic]%@",characteristic.value);
         _ambientTemerature = [sensorTMP006 calcTAmb:characteristic.value];
         _IRTemerature = [sensorTMP006 calcTObj:characteristic.value];
         [_delegate sensorTagDidChangeStatus:self];
